@@ -88,7 +88,10 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
         }
 
         public void WriteFile() 
-        {   
+        {
+            // Folder must be created off of the c drive prior to writing the file to the FSO.
+            // On the other hand if the file is saved amongst the users logged in profile the
+            // file folder doesn't need to be created before it is written...added by th 07132020
             FileWriter fw = new FileWriter(@"C:\CSharpLabs\Lab9_4.html", htmlText.ToString());
             fw.WriteThisFile();
         }

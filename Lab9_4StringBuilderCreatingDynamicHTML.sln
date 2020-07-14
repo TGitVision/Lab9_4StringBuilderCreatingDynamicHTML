@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab9_4StringBuilderCreatingDynamicHTML", "Lab9_4StringBuilderCreatingDynamicHTML.csproj", "{D79A8601-5C81-48F2-8C3D-4A255FD1F42E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D79A8601-5C81-48F2-8C3D-4A255FD1F42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79A8601-5C81-48F2-8C3D-4A255FD1F42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79A8601-5C81-48F2-8C3D-4A255FD1F42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79A8601-5C81-48F2-8C3D-4A255FD1F42E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E310FCA-127E-4466-95D4-5B7C039B9FF3}
+	EndGlobalSection
+EndGlobal

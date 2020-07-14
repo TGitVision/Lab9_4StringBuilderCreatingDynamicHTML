@@ -90,8 +90,10 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
         public void WriteFile() 
         {
 
-            FileWriter fw = new FileWriter(@"C:\Users\Travis\Desktop\Ancora_Corporate_Training\SD1104\Files\Labs Charlotte\Lab9_4.html", htmlText.ToString());
+            // FileWriter fw = new FileWriter(@"C:\Users\Travis\Desktop\Ancora_Corporate_Training\SD1104\Files\Labs Charlotte\Lab9_4.html", htmlText.ToString());
+            FileWriter fw = new FileWriter(@"C:\CSharpLabs\Lab9_4.html", htmlText.ToString());
             fw.WriteThisFile();
+
         }
 
     }

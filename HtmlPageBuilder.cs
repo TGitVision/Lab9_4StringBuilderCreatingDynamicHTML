@@ -9,6 +9,8 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
     class HtmlPageBuilder
     {
 
+        #region Fields and Properties
+
         private StringBuilder htmlText = new StringBuilder();
 
         private string bodyOpen { get; set; } = "<body>";
@@ -22,6 +24,10 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
         private string htmlLIOpen { get; set; } = "<li>";
         private string htmlLIClose { get; set; } = "</li>";
         private string dynamicHtml { get; set; } = string.Empty;
+
+        #endregion
+
+        #region Constructors
 
         public HtmlPageBuilder() 
         { 
@@ -44,6 +50,10 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
             this.htmlLIClose = htmlLIClose;
 
         }
+
+        #endregion
+
+        #region Methods
 
         public void CollectThenCreateHTML() 
         {
@@ -101,6 +111,8 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
             FileWriter fw = new FileWriter(@"C:\CSharpLabs\Lab9_4.html", htmlText.ToString());
             fw.WriteThisFile();
         }
+
+        #endregion
 
     }
 }

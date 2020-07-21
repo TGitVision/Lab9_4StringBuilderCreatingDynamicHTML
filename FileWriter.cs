@@ -7,16 +7,31 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
 {
     class FileWriter
     {
+        #region Fields and Properties
+
         // private const string userLogFile = @"C:\weblogs\userlog.txt";
 
         private string fileNameWithPath;
         private string inputTextData;
+
+        #endregion
+
+        #region Constructors
+
+        public FileWriter()
+        {
+
+        }
 
         public FileWriter(string fileNameWithPath, string inputTextData) 
         {
             this.fileNameWithPath = fileNameWithPath;
             this.inputTextData = inputTextData;
         }
+
+        #endregion
+
+        #region Methods
 
         public void WriteThisFile() 
         {
@@ -28,6 +43,8 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
             File.AppendAllText(fileName, data);
             
         }
+
+        #endregion
 
     }
 }

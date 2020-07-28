@@ -70,26 +70,60 @@ namespace Lab9_4StringBuilderCreatingDynamicHTML
 
             Console.WriteLine("Time to build our unordered list...");
 
+            int liCount = 0;
+
+            Console.WriteLine("Enter the number of items in your list?");
+            liCount = Convert.ToInt32(Console.ReadLine());
+
             // Create the Unordered List. Start with <ul>.
             htmlText.Append(htmlUnorderedOpen);
 
-            htmlText.Append(htmlLIOpen);
-            Console.WriteLine("Add an item to the list.");
-            dynamicHtml = Console.ReadLine();
-            htmlText.Append(dynamicHtml);
-            htmlText.Append(htmlLIClose);
+            // Refactored code from Lab9_4; See old version below 
+            //  failing to adhere to DRY - Don't Repeat Yourself
 
-            htmlText.Append(htmlLIOpen);
-            Console.WriteLine("Add another item to the list.");
-            dynamicHtml = Console.ReadLine();
-            htmlText.Append(dynamicHtml);
-            htmlText.Append(htmlLIClose);
+            for (int li = 0; li < liCount; li++)
+            {
 
-            htmlText.Append(htmlLIOpen);
-            Console.WriteLine("Add another item to the list.");
-            dynamicHtml = Console.ReadLine();
-            htmlText.Append(dynamicHtml);
-            htmlText.Append(htmlLIClose);
+                htmlText.Append(htmlLIOpen);
+
+                if (li == 0)
+                {
+                    Console.WriteLine("Add the first item to the list.");
+                }
+                else if (li == (liCount - 1))
+                {
+                    Console.WriteLine("Add the last item to the list.");
+                }
+                else
+                {
+                    Console.WriteLine("Add another item to the list.");
+                }
+
+                dynamicHtml = Console.ReadLine();
+                htmlText.Append(dynamicHtml);
+                htmlText.Append(htmlLIClose);
+
+            }
+
+            // Refactored since Lab9_4 to adhere to DRY
+
+            // htmlText.Append(htmlLIOpen);
+            // Console.WriteLine("Add an item to the list.");
+            // dynamicHtml = Console.ReadLine();
+            // htmlText.Append(dynamicHtml);
+            // htmlText.Append(htmlLIClose);
+
+            // htmlText.Append(htmlLIOpen);
+            // Console.WriteLine("Add another item to the list.");
+            // dynamicHtml = Console.ReadLine();
+            // htmlText.Append(dynamicHtml);
+            // htmlText.Append(htmlLIClose);
+
+            // htmlText.Append(htmlLIOpen);
+            // Console.WriteLine("Add another item to the list.");
+            // dynamicHtml = Console.ReadLine();
+            // htmlText.Append(dynamicHtml);
+            // htmlText.Append(htmlLIClose);
 
             // End the Unordered List with </ul>.
             htmlText.Append(htmlUnorderedClose);
